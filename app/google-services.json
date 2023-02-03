@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "309563501924",
+    "project_id": "ifood-clone-d12ce",
+    "storage_bucket": "ifood-clone-d12ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309563501924:android:6c682d5447bb4319985e71",
+        "android_client_info": {
+          "package_name": "com.ancafra.ifoodclone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309563501924-gl0a1fcddolivcegvdu02bf0iparu6ht.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ancafra.ifoodclone",
+            "certificate_hash": "2c72557d0e3e8ba03ff327ee75f497306bf4fc0f"
+          }
+        },
+        {
+          "client_id": "309563501924-i2tk4laro0274dn4ojgpv1efu1n60jlc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0LnaXgvz9WGgZiy-JYI8TAdtopkgjFq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309563501924-i2tk4laro0274dn4ojgpv1efu1n60jlc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

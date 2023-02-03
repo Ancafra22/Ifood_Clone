@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tolls="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".activity.fragment.usuario.UsuarioPerfilFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/l_logado"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/text_usuario"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#3e3e3e"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    tolls:layout_constraintEnd_toEndOf="parent"
+                    tolls:layout_constraintStart_toStartOf="parent"
+                    tolls:layout_constraintTop_toTopOf="parent"
+                    tools:text="Olá, Andre Francisco" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Meus dados"
+                    android:textColor="#3e3e3e"
+                    android:layout_marginBottom="16dp"
+                    tolls:layout_constraintBottom_toBottomOf="parent"
+                    tolls:layout_constraintStart_toStartOf="@+id/text_usuario"
+                    tolls:layout_constraintTop_toBottomOf="@+id/text_usuario" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/ic_seta_direita"
+                    tolls:layout_constraintBottom_toBottomOf="parent"
+                    tolls:layout_constraintEnd_toEndOf="parent"
+                    tolls:layout_constraintTop_toTopOf="parent" />
+
+                <include
+                    layout="@layout/divisor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tolls:layout_constraintBottom_toBottomOf="parent"
+                    tolls:layout_constraintEnd_toEndOf="parent"
+                    tolls:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/l_deslogado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/texto_usuario"
+                    android:textSize="20sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="32dp"
+                    android:textColor="#3e3e3e"
+                    tolls:layout_constraintStart_toStartOf="parent"
+                    tolls:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:src="@drawable/ic_img_entrar"
+                    tolls:layout_constraintEnd_toEndOf="parent"
+                    tolls:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginTop="24dp"
+                    android:orientation="horizontal"
+                    tolls:layout_constraintBottom_toBottomOf="parent"
+                    tolls:layout_constraintEnd_toEndOf="parent"
+                    tolls:layout_constraintStart_toStartOf="parent"
+                    tolls:layout_constraintTop_toBottomOf="@+id/imageView">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_entrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn"
+                        android:backgroundTint="@color/cor_principal"
+                        android:padding="16dp"
+                        android:text="Entrar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_cadastrar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_btn"
+                        android:backgroundTint="@color/cor_principal"
+                        android:padding="16dp"
+                        android:text="Cadastrar"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_perfil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_perfil_off"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Perfil"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Meus dados"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_favoritos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_favorito_off"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Favoritos"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Meus locais favoritos"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_enderecos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_endereco"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Endereços"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Meus endereços de entrega"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_cupons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_cupom"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Cupons"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Meus dados"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_ajuda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_ajuda"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Ajuda"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Tire suas dúvidas"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+
+            <LinearLayout
+                android:id="@+id/menu_deslogar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_sair"
+                    android:layout_marginStart="24dp"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Sair"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="Sair da sua conta"/>
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.utils.widget.ImageFilterView
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_seta_direita"/>
+
+            </LinearLayout>
+
+            <include layout="@layout/divisor"/>
+            
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

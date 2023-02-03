@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.usuario.UsuarioFinalizaCadastroActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="24dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp"
+                android:textColor="@color/cor_principal"
+                android:text="Cadastro de usuários"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/cor_principal"
+                android:text="Nome"/>
+
+            <EditText
+                android:id="@+id/edt_nome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawablePadding="16dp"
+                android:hint="Digite seu nome"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/cor_principal"
+                android:layout_marginTop="8dp"
+                android:text="CPF"/>
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/edt_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_cpf"
+                android:drawablePadding="16dp"
+                android:hint="Digite seu CPF"
+                app:mask="___.___.___-__"
+                app:maskCharacter="_"
+                app:maskStyle="completable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/cor_principal"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="Endereço e número"/>
+
+            <EditText
+                android:id="@+id/edt_rua"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_rua"
+                android:drawablePadding="16dp"
+                android:hint="Digite seu endereço com número"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/cor_principal"
+                android:layout_marginTop="8dp"
+                android:text="Bairro"/>
+
+            <EditText
+                android:id="@+id/edt_bairro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_rua"
+                android:drawablePadding="16dp"
+                android:hint="Digite seu bairro"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/cor_principal"
+                android:text="Cidade"/>
+
+            <EditText
+                android:id="@+id/edt_cidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_rua"
+                android:drawablePadding="16dp"
+                android:hint="Digite sua cidade"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/cor_principal"
+                android:text="Estado"/>
+
+            <EditText
+                android:id="@+id/edt_estado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:drawableStart="@drawable/ic_rua"
+                android:drawablePadding="16dp"
+                android:padding="16dp"
+                android:hint="Estado"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/cor_principal"
+                android:text="CEP"/>
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/edt_cep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:drawableStart="@drawable/ic_rua"
+                android:drawablePadding="16dp"
+                android:hint="Digite seu CEP"
+                app:mask="_____-___"
+                app:maskCharacter="_"
+                app:maskStyle="completable" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/cor_principal"
+                android:text="Telefone"/>
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/edt_telefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_edit2"
+                android:padding="16dp"
+                android:inputType="number"
+                app:mask="+55 (__) _____-____"
+                app:maskCharacter="_"
+                app:maskStyle="completable"
+                android:drawableStart="@drawable/ic_phone"
+                android:drawablePadding="16dp"
+                android:hint="Digite telefone"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_edit"
+                android:onClick="validaDados"
+                android:padding="16dp"
+                android:text="Cadastrar"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/cor_principal"
+                android:textSize="16dp" />
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminateTint="@color/cor_principal"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
