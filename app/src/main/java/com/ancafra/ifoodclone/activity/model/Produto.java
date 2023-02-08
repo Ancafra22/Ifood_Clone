@@ -19,6 +19,7 @@ public class Produto implements Serializable {
     private String valorAntigo;
     private String descricao;
     private String urlImagem;
+    private Boolean addMais = false;
 
     public Produto() {
         DatabaseReference produtoRef = FirebaseHelper.getDatabaseReference();
@@ -119,5 +120,14 @@ public class Produto implements Serializable {
 
     public void setUrlImagem(String urlImagem) {
         this.urlImagem = urlImagem;
+    }
+
+    @Exclude
+    public Boolean getAddMais() {
+        return addMais;
+    }
+
+    public void setAddMais(Boolean addMais) {
+        this.addMais = addMais;
     }
 }
