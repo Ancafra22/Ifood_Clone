@@ -20,10 +20,10 @@ import java.util.List;
 
 public class AddMaisAdapter extends RecyclerView.Adapter<AddMaisAdapter.MyViewHolder> {
 
-    private List<Produto> produtoList;
-    private List<String> addMaisList;
-    private Context context;
-    private OnClickListener onClickListener;
+    private final List<Produto> produtoList;
+    private final List<String> addMaisList;
+    private final Context context;
+    private final OnClickListener onClickListener;
 
     public AddMaisAdapter(List<Produto> produtoList, List<String> addMaisList, Context context, OnClickListener onClickListener) {
         this.produtoList = produtoList;
