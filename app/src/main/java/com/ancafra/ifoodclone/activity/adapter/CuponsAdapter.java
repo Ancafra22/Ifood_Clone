@@ -14,8 +14,8 @@ import com.ancafra.ifoodclone.activity.model.Cupons;
 import java.util.List;
 
 public class CuponsAdapter extends RecyclerView.Adapter<CuponsAdapter.MyViewHolder> {
-    private List<Cupons> cuponsList;
-    private OnClickListener onClickListener;
+    private final List<Cupons> cuponsList;
+    private final OnClickListener onClickListener;
 
     public CuponsAdapter(List<Cupons> cuponsList, OnClickListener onClickListener) {
         this.cuponsList = cuponsList;

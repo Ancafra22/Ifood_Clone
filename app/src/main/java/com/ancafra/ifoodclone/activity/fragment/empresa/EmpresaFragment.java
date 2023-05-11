@@ -21,6 +21,8 @@ import com.ancafra.ifoodclone.activity.model.Empresa;
 import com.ancafra.ifoodclone.activity.model.Login;
 import com.ancafra.ifoodclone.activity.empresa.EmpresaFinalizaCadastroActivity;
 
+import java.util.Objects;
+
 
 public class EmpresaFragment extends Fragment {
 
@@ -82,7 +84,7 @@ public class EmpresaFragment extends Fragment {
         ).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
 
-                String id = task.getResult().getUser().getUid();
+                String id = Objects.requireNonNull(Objects.requireNonNull(task.getResult()).getUser()).getUid();
 
                 empresa.setId(id);
                 empresa.salvar();
@@ -98,7 +100,7 @@ public class EmpresaFragment extends Fragment {
 
             }else{
                 progressBar.setVisibility(View.GONE);
-                erroAutenticacao(FirebaseHelper.validaErros(task.getException().getMessage()));
+                erroAutenticacao(FirebaseHelper.validaErros(Objects.requireNonNull(Objects.requireNonNull(task.getException()).getMessage())));
             }
         });
     }

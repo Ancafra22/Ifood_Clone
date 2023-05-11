@@ -14,8 +14,8 @@ import com.ancafra.ifoodclone.activity.model.Categoria;
 import java.util.List;
 
 public class CategoriaAdapter extends RecyclerView.Adapter<CategoriaAdapter.MyViewHolder> {
-    private List<Categoria> categoriaList;
-    private OnClickListener onClickListener;
+    private final List<Categoria> categoriaList;
+    private final OnClickListener onClickListener;
 
     public CategoriaAdapter(List<Categoria> categoriaList, OnClickListener onClickListener) {
         this.categoriaList = categoriaList;

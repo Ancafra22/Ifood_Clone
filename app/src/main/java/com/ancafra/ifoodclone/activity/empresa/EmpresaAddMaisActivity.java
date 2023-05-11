@@ -26,8 +26,8 @@ import java.util.List;
 
 public class EmpresaAddMaisActivity extends AppCompatActivity implements AddMaisAdapter.OnClickListener {
 
-    private List<Produto> produtoList = new ArrayList<>();
-    private List<String> addMaisList = new ArrayList<>();
+    private final List<Produto> produtoList = new ArrayList<>();
+    private final List<String> addMaisList = new ArrayList<>();
 
     private AddMaisAdapter addMaisAdapter;
 

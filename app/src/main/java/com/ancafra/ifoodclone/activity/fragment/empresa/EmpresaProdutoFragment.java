@@ -37,7 +37,7 @@ import java.util.List;
 
 public class EmpresaProdutoFragment extends Fragment implements ProdutoAdapterEmpresa.OnClickListener {
 
-    private List<Produto> produtoList = new ArrayList<>();
+    private final List<Produto> produtoList = new ArrayList<>();
     private ProdutoAdapterEmpresa produtoAdapterEmpresa;
     private SwipeableRecyclerView rv_produtos;
     private ProgressBar progressBar;

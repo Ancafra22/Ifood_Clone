@@ -24,7 +24,7 @@ import java.util.List;
 
 public class EmpresaRecebimentosActivity extends AppCompatActivity {
 
-    private List<Pagamento> pagamentoList = new ArrayList<>();
+    private final List<Pagamento> pagamentoList = new ArrayList<>();
 
     private Pagamento dinheiro = new Pagamento();
     private Pagamento dinheiroEntrega = new Pagamento();
@@ -37,9 +37,6 @@ public class EmpresaRecebimentosActivity extends AppCompatActivity {
     private CheckBox cb_cce;
     private CheckBox cb_ccr;
     private CheckBox cb_app;
-
-    private EditText edt_public_key;
-    private EditText edt_access_token;
 
     private ImageButton ib_salvar;
     private ProgressBar progressBar;
@@ -132,7 +129,7 @@ public class EmpresaRecebimentosActivity extends AppCompatActivity {
                     configPagamentos();
 
                 }else {
-                    configSalvar(false);
+                    configSalvar();
                 }
             }
 
@@ -143,8 +140,8 @@ public class EmpresaRecebimentosActivity extends AppCompatActivity {
         });
     }
 
-    private void configSalvar(boolean progress){
-        if(progress){
+    private void configSalvar(){
+        if(false){
             progressBar.setVisibility(View.VISIBLE);
             ib_salvar.setVisibility(View.GONE);
         }else {
@@ -178,7 +175,7 @@ public class EmpresaRecebimentosActivity extends AppCompatActivity {
                     break;
             }
         }
-        configSalvar(false);
+        configSalvar();
     }
 
     private void validaPagamentos(){
@@ -195,8 +192,8 @@ public class EmpresaRecebimentosActivity extends AppCompatActivity {
         cb_ccr = findViewById(R.id.cb_ccr);
         cb_app = findViewById(R.id.cb_app);
 
-        edt_public_key = findViewById(R.id.edt_public_key);
-        edt_access_token = findViewById(R.id.edt_access_token);
+        EditText edt_public_key = findViewById(R.id.edt_public_key);
+        EditText edt_access_token = findViewById(R.id.edt_access_token);
 
         ib_salvar = findViewById(R.id.ib_salvar);
         progressBar = findViewById(R.id.progressBar);
